@@ -2,6 +2,9 @@ import {StyleSheet, TouchableOpacity, View} from 'react-native';
 
 import Svg, {G, Circle} from 'react-native-svg';
 
+// Import vector icons
+import Icon from 'react-native-vector-icons/AntDesign';
+
 const NextButton = () => {
   const size = 128;
   const strokeWidth = 2;
@@ -31,9 +34,9 @@ const NextButton = () => {
           />
         </G>
       </Svg>
-      <TouchableOpacity
-        style={styles.button}
-        activeOpacity={0.6}></TouchableOpacity>
+      <TouchableOpacity style={styles.button} activeOpacity={0.6}>
+        <Icon name="arrowright" size={32} color="#fff" />
+      </TouchableOpacity>
     </View>
   );
 };
@@ -43,5 +46,11 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  button: {
+    position: 'absolute',
+    backgroundColor: '#f4338f',
+    borderRadius: 100,
+    padding: 20,
   },
 });
